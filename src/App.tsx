@@ -11,6 +11,9 @@ const App = () => (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Index />} />
+                <Route path="/futebol" element={<Index />} />
+                <Route path="/basquete" element={<Index />} />
+                <Route path="/ranking" element={<Index />} />
             </Routes>
         </BrowserRouter>
    </QueryClientProvider>
