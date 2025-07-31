@@ -5,7 +5,6 @@ import StartCard from "./ui/StartCard";
 const QuickStarts = () => {
 
     return (
-        <div className="container mx-auto px-4 py-10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
                 <StartCard
                 title="Jogos de Hoje"
@@ -38,7 +37,6 @@ const QuickStarts = () => {
                 />
 
             </div>
-        </div>
     )
 
 }
