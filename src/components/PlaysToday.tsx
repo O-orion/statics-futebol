@@ -1,8 +1,9 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/Tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/Card";
-import { Clock, Trophy } from "lucide-react";
+import { Clock, Swords, Trophy } from "lucide-react";
 import StartCard from "./ui/StartCard";
 import PlayCard from "./ui/PlayCard";
+import { cn } from "@/lib/utils";
 
 const PlaysToday = () => {
     const classificacao = [
@@ -18,7 +19,12 @@ const PlaysToday = () => {
     return (
         <div className="min-h-screen bg-background">
             <div className="container mx-auto px-4 py-10" >
-                
+                <div className="flex items-center gap-3 mb-10" >
+                    <div className={cn("p-3 rounded-lg", 'bg-gradient-court')}>
+                        <Swords className="h-6 w-7 text-white"  />
+                    </div>
+                    <h3 className="text-4xl font-bold text-card-foreground" >Jogos de Hoje</h3>
+                </div>
                 <Tabs
                     defaultValue="Brasileirao"
                     className="space-y-6 "
@@ -46,13 +52,6 @@ const PlaysToday = () => {
                                     timeCasa="Corinthians"
                                     timeVisitante="Palmeiras"
                                     variant="success"
-                                    />
-                                    <PlayCard 
-                                    campeonato="Brasileirão"
-                                    data="Hoje"
-                                    horario="19:00"
-                                    timeCasa="Corinthians"
-                                    timeVisitante="Palmeiras"
                                     />
                                     <PlayCard 
                                     campeonato="Brasileirão"
