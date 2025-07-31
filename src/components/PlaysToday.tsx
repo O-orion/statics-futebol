@@ -1,4 +1,4 @@
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/Tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/Card";
 import { Clock, Trophy } from "lucide-react";
 import StartCard from "./ui/StartCard";
@@ -17,11 +17,11 @@ const PlaysToday = () => {
 
     return (
         <div className="min-h-screen bg-background">
-            <div className="relative  container mx-auto px-4 py-10" >
+            <div className="container mx-auto px-4 py-10" >
                 
                 <Tabs
                     defaultValue="Brasileirao"
-                    className="space-y-6"
+                    className="space-y-6 "
                 >
                     <TabsList className="grid w-full grid-cols-4" >
                         <TabsTrigger value="Brasileirao" >Brasileirão 2025</TabsTrigger>
