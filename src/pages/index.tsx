@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Navigation from "@/components/Navigation"
+import PlaysToday from "@/components/PlaysToday";
 import QuickStarts from "@/components/QuickStarts";
 import Button from "@/components/ui/Button";
 import { Star, Trophy } from "lucide-react";
@@ -11,6 +12,7 @@ const Index = () => {
             <Navigation />
             <Hero />
             <QuickStarts />
+            <PlaysToday />
         </div>
     )
 
