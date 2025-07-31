@@ -2,6 +2,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@radix-ui/react-tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/Card";
 import { Clock, Trophy } from "lucide-react";
 import StartCard from "./ui/StartCard";
+import PlayCard from "./ui/PlayCard";
 
 const PlaysToday = () => {
     const classificacao = [
@@ -11,6 +12,8 @@ const PlaysToday = () => {
         { pos: 4, time: "São Paulo", p: 54, j: 32, v: 16, e: 6, d: 10, gp: 43, gc: 32, sg: 11 },
         { pos: 5, time: "Corinthians", p: 51, j: 32, v: 14, e: 9, d: 9, gp: 42, gc: 35, sg: 7 }
     ];
+
+    
 
     return (
         <div className="min-h-screen bg-background">
@@ -35,24 +38,36 @@ const PlaysToday = () => {
                         </CardHeader>
                         <CardContent>
                             <div className="overflow-x-auto p-4">
-                                <div className="flex gap-4" >
-                                    <StartCard
-                                    title="Jogos de Hoje"
-                                    value={12}
-                                    description="Ao vivo e programadas"
-                                    icon={<Clock className="w-4 h-4" />}
+                                <div className="grid grid-cols-3 gap-2" >
+                                    <PlayCard 
+                                    campeonato="Brasileirão"
+                                    data="Hoje"
+                                    horario="19:00"
+                                    timeCasa="Corinthians"
+                                    timeVisitante="Palmeiras"
                                     variant="success"
-                                    />                                    <StartCard
-                                    title="Jogos de Hoje"
-                                    value={12}
-                                    description="Ao vivo e programadas"
-                                    icon={<Clock className="w-4 h-4" />}
-                                    variant="success"
-                                    />                                    <StartCard
-                                    title="Jogos de Hoje"
-                                    value={12}
-                                    description="Ao vivo e programadas"
-                                    icon={<Clock className="w-4 h-4" />}
+                                    />
+                                    <PlayCard 
+                                    campeonato="Brasileirão"
+                                    data="Hoje"
+                                    horario="19:00"
+                                    timeCasa="Corinthians"
+                                    timeVisitante="Palmeiras"
+                                    />
+                                    <PlayCard 
+                                    campeonato="Brasileirão"
+                                    data="Hoje"
+                                    horario="19:00"
+                                    timeCasa="Corinthians"
+                                    timeVisitante="Palmeiras"
+                                    variant="danger"
+                                    />
+                                    <PlayCard 
+                                    campeonato="Brasileirão"
+                                    data="Hoje"
+                                    horario="19:00"
+                                    timeCasa="Corinthians"
+                                    timeVisitante="Palmeiras"
                                     variant="success"
                                     />
                                 </div>
