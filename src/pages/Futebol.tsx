@@ -1,15 +1,28 @@
 import Navigation from "@/components/Navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import StartCard from "@/components/ui/StartCard";
-import { Tabs, TabsList } from "@/components/ui/Tabs";
-import { TabsContent, TabsTrigger } from "@radix-ui/react-tabs";
-import { Clock, Target, TrendingUp, Trophy } from "lucide-react";
+import { Tabs, TabsList, TabsContent, TabsTrigger } from "@/components/ui/Tabs";
+import { ArrowDown, ArrowUp, Clock, Target, TrendingUp, Trophy } from "lucide-react";
 import { useEffect, useState } from "react";
 import classificacao from '../data/brasileirao.json'
 
 const Futebol = () => {
     const [ classificacaoData, setClassificacaoData ] = useState([]);
     
+      const jogosHoje = [
+    { time1: "Palmeiras", time2: "Flamengo", horario: "16:00", status: "live" },
+    { time1: "Corinthians", time2: "São Paulo", horario: "18:30", status: "scheduled" },
+    { time1: "Santos", time2: "Grêmio", horario: "20:00", status: "scheduled" }
+  ];
+
+  const artilheiros = [
+    { nome: "Yuri Alberto", time: "Corinthians", gols: 25 },
+    { nome: "Pedro", time: "Flamengo", gols: 18 },
+    { nome: "Raphael Veiga", time: "Palmeiras", gols: 16 },
+    { nome: "Hulk", time: "Atletico-MG", gols: 15 },
+    { nome: "Calleri", time: "São Paulo", gols: 14 },
+  ];
+
     useEffect(()=> {
         setClassificacaoData(classificacao.classificacao)
     }, [classificacao])
@@ -67,8 +80,8 @@ const Futebol = () => {
                 </div>
             </div>
 
-            <Tabs defaultValue="classificacao" className="space-v-6"  >
-                <TabsList className="grid w-full grid-cols-4"  >
+            <Tabs defaultValue="classificacao" className="p-4 space-v-6"  >
+                <TabsList className="mb-3 grid w-full grid-cols-4"  >
                     <TabsTrigger value="classificacao" >Classificação</TabsTrigger>
                     <TabsTrigger value="jogos" >Jogo</TabsTrigger>
                     <TabsTrigger value="estatisticas" >Estatisticas</TabsTrigger>
@@ -129,6 +142,153 @@ const Futebol = () => {
                                         }
                                     </tbody>
                                 </table>
+                            </div>
+                            <div className="mt-4 flex flw-wrap gap-4 text-sm text-muted-foreground">
+                                <div className="flex items-center space-x-2">
+                                    <div className="w-3 h-3 bg-secondary rounded-full" />
+                                        <span>Libertadores</span>
+                                </div>
+                                <div className="flex items-center space-x-2">
+                                    <div className="w-3 h-3 bg-destructive rounded-full" />
+                                    <span>Rebaixamento</span>
+                                </div>
+                            </div>
+                        </CardContent>
+                    </Card>
+                </TabsContent>
+
+                <TabsContent value="jogos" className="space-y-6" >
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center space-x-2" >
+                                <Clock className="w-5 h-5"  />
+                                <span>Jogos de Hoje</span>
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent>
+                            <div className="space-y-4">
+                                {
+                                    jogosHoje.map((jogo,index) => (
+                                        <div  
+                                        key={index}
+                                        className="flex items-center justify-between p-4 border-border rounded-lg hover:shadow-glow transition-all"
+                                        >
+                                            <div className="flex items-center space-x-4">
+                                                <div className="text-center">
+                                                    <div className="font-semibold">{jogo.time1}</div>
+                                                </div>
+                                                <div className="text-2xl font-bold text-muted-foreground">VS</div>
+                                                <div className="text-center">
+                                                    <div className="font-semibold">{jogo.time2}</div>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center space-x-3">
+                                                {
+                                                    jogo.status === 'live' && (
+                                                        <div className="flex items-center space-x-2">
+                                                            <div className="w-2 h-2 bg-red-500 rounded-full animated-pulse"></div>
+                                                            <span className="text-sm font-medium text-red-500" >AO VIVO</span>
+                                                        </div>
+                                                    )}
+                                                    <div className="text-lg-font-semilbold">
+                                                        {jogo.horario}
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    ))
+                                }
+                            </div>
+                        </CardContent>
+                    </Card>
+                </TabsContent>
+
+                <TabsContent value="estatisticas" className="space-y-6" >
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center space-x-2" >
+                                    <TrendingUp className="w-5 h-5" />
+                                    <span>Times em Alta</span>
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="space-y-3">
+                                    <div className="flex items-center justify-between p-3 bg-secondary/20 rounded-lg">
+                                        <div className="flex items-center space-x-3">
+                                            <ArrowUp className="w-4 h-4 text-secondary" />
+                                            <span className="font-medium" >Corinthians</span>
+                                        </div>
+                                        <span className="text-sm text-muted-foreground">5 Vitórias Seguidas</span>
+                                    </div>
+                                    <div className="flex items-center justify-between p-3  bg-secondary/20 rounded-lg">
+                                        <div className="flex items-center space-x-3">
+                                            <ArrowUp className="w-4 h-4 text-secondart" />
+                                            <span className="font-medium">Flamengo</span>
+                                        </div>
+                                     <span className="text-sm text-muted-foreground">4 Vitórias Seguidas</span>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                        <Card>
+                            <CardHeader>
+                                <CardTitle className="flex items-center space-x-2" >
+                                    <ArrowDown className="h-5 w-5" />
+                                    <span>Time em Baixa</span>
+                                </CardTitle>
+                            </CardHeader>
+                            <CardContent>
+                                <div className="space-y-3">
+                                    <div className="flex items-center justify-between p-3 bg-destructive/20 rounded-lg">
+                                        <div className="flex items-center space-x-3">
+                                            <ArrowDown className="w-4 h-4 text-destructive" />
+                                            <span className="font-medium">Santos</span>
+                                        </div>
+                                        <span className="text-sm text-muted-foreground">4 Derrotas seguidas</span>
+                                    </div>
+                                    <div className="flex items-center justify-between p-3 bg-destructive/20 rounded-lg">
+                                        <div className="flex items-center space-x-3">
+                                            <ArrowDown className="w-4 h-4 text-destructive" />
+                                            <span className="font-medium">Sport</span>
+                                        </div>
+                                        <span className="font-sm text-muted-foreground">3 Empates seguidos</span>
+                                    </div>
+                                </div>
+                            </CardContent>
+                        </Card>
+                    </div>
+                </TabsContent>
+
+                <TabsContent value="artilheiros" className="space-y-6" >
+                    <Card>
+                        <CardHeader>
+                            <CardTitle className="flex items-center space-x-2" >
+                                <Target className="w-5 h-5" />
+                                <span>Artilheiros do Brasileirão 2025</span>
+                            </CardTitle>
+                        </CardHeader>
+                        <CardContent >
+                            <div className="space-y-3">
+                                {
+                                    artilheiros.map((jogador, index) => (
+                                        <div key={index} className="flex items-center justify-between p-4 border border-border rounded-lg hover:shadow-glow transition-all">
+                                            <div className="flex items-center space-x-4">
+                                                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
+                                                index === 0 ? 'bg-gradient-victory text-white' : 
+                                                index === 1 ? 'bg-secondary text-secondary-foreground' :
+                                                index === 2 ? 'bg-quaternary text-quaternary-foreground' :
+                                                'bg-muted text-muted-foreground'
+                                                }`}>
+                                                {index + 1}
+                                                </div>
+                                                <div>
+                                                    <div className="font-semibold">{jogador.nome}</div>
+                                                    <div className="text-sm text-muted-foreground">{jogador.time}</div>
+                                                </div>
+                                            </div>
+                                            <div className="text-2xl font-bold">{jogador.gols}</div>
+                                        </div>
+                                    ))}
                             </div>
                         </CardContent>
                     </Card>
