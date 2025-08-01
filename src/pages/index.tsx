@@ -1,10 +1,9 @@
 import Hero from "@/components/Hero";
+import Highlights from "@/components/Highlights";
 import Navigation from "@/components/Navigation"
 import PlaysToday from "@/components/PlaysToday";
 import QuickStarts from "@/components/QuickStarts";
 import Sports from "@/components/Sports";
-import Button from "@/components/ui/Button";
-import { Star, Trophy } from "lucide-react";
 
 const Index = () => {
 
@@ -17,6 +16,7 @@ const Index = () => {
                 <Sports />
             </section>
             <PlaysToday />
+            <Highlights />
         </div>
     )
 
