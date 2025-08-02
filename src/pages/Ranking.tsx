@@ -1,16 +1,17 @@
 import Navigation from "@/components/Navigation";
+import { Badge } from "@/components/ui/Badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import StartCard from "@/components/ui/StartCard";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/Tabs";
-import { BarChart3, ShieldCheck, Target, Trophy, Zap } from "lucide-react";
+import { Award, BarChart3, ShieldCheck, Target, Trophy, Zap } from "lucide-react";
 
 const Ranking = () => {
   const artilheirosFutebol = [
-    { nome: "Pedro", time: "Flamengo", gols: 18, jogos: 25, media: 0.72 },
-    { nome: "Raphael Veiga", time: "Palmeiras", gols: 16, jogos: 28, media: 0.57 },
+    { nome: "Memphis Depay", time: "Corinthians", gols: 18, jogos: 25, media: 0.72 },
+    { nome: "Yuri Alberto", time: "Corinthians", gols: 16, jogos: 28, media: 0.57 },
     { nome: "Hulk", time: "Atletico-MG", gols: 15, jogos: 26, media: 0.58 },
     { nome: "Calleri", time: "São Paulo", gols: 14, jogos: 30, media: 0.47 },
-    { nome: "Yuri Alberto", time: "Corinthians", gols: 12, jogos: 27, media: 0.44 }
+    { nome: "Pedro", time: "Flamengo", gols: 12, jogos: 27, media: 0.44 }
   ];
 
   const pontuadoresBasquete = [
@@ -22,8 +23,8 @@ const Ranking = () => {
   ];
 
   const assistenciasFutebol = [
-    { nome: "Arrascaeta", time: "Flamengo", assists: 12, jogos: 28 },
-    { nome: "Raphael Veiga", time: "Palmeiras", assists: 11, jogos: 28 },
+    { nome: "Rodrigo Garro", time: "Corinthians", assists: 12, jogos: 28 },
+    { nome: "Carillo", time: "Corinthians", assists: 11, jogos: 28 },
     { nome: "Éverton Ribeiro", time: "Bahia", assists: 10, jogos: 25 },
     { nome: "Wesley", time: "Corinthians", assists: 9, jogos: 26 },
     { nome: "Ganso", time: "Fluminense", assists: 8, jogos: 22 }
@@ -49,15 +50,17 @@ const Ranking = () => {
             <Navigation />
 
             <section className="relative overflow-hidden border-b border-border">
-                <div className="absolute inset-0 bg-gradient victory opacity-10"></div>
+                <div className="absolute inset-0 bg-gradient-victory opacity-10" />
                 <div className="container mx-auto px-4 py-12">
-                    <div className="flex items-center space-x-4 animate-fade-in">
-                        <BarChart3 className="w-8 h-8 text-white" />
+                <div className="flex items-center space-x-4 animate-fade-in">
+                    <div className="w-16 h-16 bg-gradient-victory rounded-xl flex items-center justify-center">
+                    <BarChart3 className="w-8 h-8 text-white" />
                     </div>
                     <div>
-                        <div className="text-4xl font-bold">Rankings</div>
-                        <div className="text-muted-foreground">Os melhores do Futebol e Basquete</div>
+                    <h1 className="text-4xl font-bold">Rankings</h1>
+                    <p className="text-muted-foreground">Os melhores do futebol e basquete</p>
                     </div>
+                </div>
                 </div>
             </section>
 
@@ -65,7 +68,7 @@ const Ranking = () => {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                     <StartCard
                     title="Artilheiro"
-                    value="Pedro"
+                    value="Y.Alberto"
                     description="18 gols (Futebol)"
                     icon={<Trophy className="w-4 h-4" />}
                     variant="success"
@@ -79,14 +82,14 @@ const Ranking = () => {
                     />
                     <StartCard
                         title="Assistente"
-                        value="Arrascaeta"
+                        value="R.Garro"
                         description="12 assists (Futebol)"
                         icon={<Zap className="w-4 h-4" />}
                         variant="default"
                     />
                     <StartCard
                         title="Defensor"
-                        value="Weverton"
+                        value="H.Souza"
                         description="87 defesas"
                         icon={<ShieldCheck className="w-4 h-4" />}
                         variant="success"

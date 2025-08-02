@@ -1,20 +1,10 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/Tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/Card";
 import { Clock, Swords, Trophy } from "lucide-react";
-import StartCard from "./ui/StartCard";
 import PlayCard from "./ui/PlayCard";
 import { cn } from "@/lib/utils";
 
 const PlaysToday = () => {
-    const classificacao = [
-        { pos: 1, time: "Palmeiras", p: 67, j: 32, v: 20, e: 7, d: 5, gp: 54, gc: 26, sg: 28 },
-        { pos: 2, time: "Flamengo", p: 64, j: 32, v: 19, e: 7, d: 6, gp: 58, gc: 31, sg: 27 },
-        { pos: 3, time: "Atletico-MG", p: 58, j: 32, v: 17, e: 7, d: 8, gp: 48, gc: 35, sg: 13 },
-        { pos: 4, time: "São Paulo", p: 54, j: 32, v: 16, e: 6, d: 10, gp: 43, gc: 32, sg: 11 },
-        { pos: 5, time: "Corinthians", p: 51, j: 32, v: 14, e: 9, d: 9, gp: 42, gc: 35, sg: 7 }
-    ];
-
-    
 
     return (
         <div className="min-h-screen bg-background">
@@ -57,7 +47,7 @@ const PlaysToday = () => {
                                     campeonato="Brasileirão"
                                     data="Hoje"
                                     horario="19:00"
-                                    timeCasa="Corinthians"
+                                    timeCasa="Flamengo"
                                     timeVisitante="Palmeiras"
                                     variant="danger"
                                     />
@@ -65,7 +55,7 @@ const PlaysToday = () => {
                                     campeonato="Brasileirão"
                                     data="Hoje"
                                     horario="19:00"
-                                    timeCasa="Corinthians"
+                                    timeCasa="Gremio"
                                     timeVisitante="Palmeiras"
                                     variant="success"
                                     />

@@ -1,7 +1,13 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader, CardTitle } from "./Card";
-import imageVisitante from "@/assets/escudos/cor.png"
-import imageCasa from "@/assets/escudos/pal.png"
+import cor from "@/assets/escudos/cor.png";
+import pal from "@/assets/escudos/pal.png";
+import fla from "@/assets/escudos/fla.png";
+import vas from "@/assets/escudos/vas.png";
+import gre from "@/assets/escudos/gre.png";
+import inter from "@/assets/escudos/inter.png";
+import { useEffect, useState } from "react";
 
 interface StatCardProps {
     campeonato: string;
@@ -23,6 +29,24 @@ const PlayCard = ({
     variant = 'default',
     className
 }: StatCardProps) => {
+
+    const [ imgCasa, setImgCasa ] = useState(null)
+    const [ imgVisi, setImgVisi] = useState(null)
+    useEffect(() => {
+        switch(timeCasa){
+            case "Corinthians":
+                setImgCasa(cor)
+                setImgVisi(pal)
+                break;
+            case "Flamengo":
+                setImgCasa(fla)
+                setImgVisi(vas)
+                break;
+            default:
+                setImgCasa(gre)
+                setImgVisi(inter)
+        }
+    }, [])
 
     const getVariantStyles = () => {
         switch (variant) {
@@ -55,11 +79,11 @@ const PlayCard = ({
             <CardContent className="p-4 bg-gray-800 text-white rounded-lg shadow-lg">
             <div className="text-sm text-gray-400 mb-2">Brasileirão - Hoje, 19:00</div>
             <div className="flex items-center justify-between">
-                <img src={imageVisitante} alt="Corinthians Logo" className="w-16 h-16 object-contain" />
+                <img src={imgCasa} alt="Corinthians Logo" className="w-16 h-16 object-contain" />
                 <div className="flex-1 text-center">
                 <div className="text-2xl font-bold">Corinthians x Palmeiras</div>
                 </div>
-                <img src={imageCasa} alt="Palmeiras Logo" className="w-16 h-16 object-contain" />
+                <img src={imgVisi} alt="Palmeiras Logo" className="w-16 h-16 object-contain" />
             </div>
             </CardContent>
         </Card>
