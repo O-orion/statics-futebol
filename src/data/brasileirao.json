@@ -240,5 +240,269 @@
             "gc": 24,
             "sg": -16
         }
-    ]
+    ],
+    "basquete": [
+  {
+    "Pos": 1,
+    "Time": "Cleveland Cavaliers",
+    "V": 64,
+    "D": 18,
+    "Apr": 0.780,
+    "PF": 122,
+    "PS": 112
+  },
+  {
+    "Pos": 2,
+    "Time": "Boston Celtics",
+    "V": 61,
+    "D": 21,
+    "Apr": 0.744,
+    "PF": 116,
+    "PS": 107
+  },
+  {
+    "Pos": 3,
+    "Time": "New York Knicks",
+    "V": 51,
+    "D": 31,
+    "Apr": 0.622,
+    "PF": 116,
+    "PS": 112
+  },
+  {
+    "Pos": 4,
+    "Time": "Indiana Pacers",
+    "V": 50,
+    "D": 32,
+    "Apr": 0.610,
+    "PF": 117,
+    "PS": 115
+  },
+  {
+    "Pos": 5,
+    "Time": "Milwaukee Bucks",
+    "V": 48,
+    "D": 34,
+    "Apr": 0.585,
+    "PF": 116,
+    "PS": 113
+  },
+  {
+    "Pos": 6,
+    "Time": "Detroit Pistons",
+    "V": 44,
+    "D": 38,
+    "Apr": 0.537,
+    "PF": 116,
+    "PS": 114
+  },
+  {
+    "Pos": 7,
+    "Time": "Orlando Magic",
+    "V": 41,
+    "D": 41,
+    "Apr": 0.500,
+    "PF": 105,
+    "PS": 106
+  },
+  {
+    "Pos": 8,
+    "Time": "Atlanta Hawks",
+    "V": 40,
+    "D": 42,
+    "Apr": 0.488,
+    "PF": 118,
+    "PS": 119
+  },
+  {
+    "Pos": 9,
+    "Time": "Chicago Bulls",
+    "V": 39,
+    "D": 43,
+    "Apr": 0.476,
+    "PF": 118,
+    "PS": 119
+  },
+  {
+    "Pos": 10,
+    "Time": "Miami Heat",
+    "V": 37,
+    "D": 45,
+    "Apr": 0.451,
+    "PF": 111,
+    "PS": 110
+  },
+  {
+    "Pos": 11,
+    "Time": "Toronto Raptors",
+    "V": 30,
+    "D": 52,
+    "Apr": 0.366,
+    "PF": 111,
+    "PS": 115
+  },
+  {
+    "Pos": 12,
+    "Time": "Brooklyn Nets",
+    "V": 26,
+    "D": 56,
+    "Apr": 0.317,
+    "PF": 105,
+    "PS": 112
+  },
+  {
+    "Pos": 13,
+    "Time": "Philadelphia 76ers",
+    "V": 24,
+    "D": 58,
+    "Apr": 0.293,
+    "PF": 110,
+    "PS": 116
+  },
+  {
+    "Pos": 14,
+    "Time": "Charlotte Hornets",
+    "V": 19,
+    "D": 63,
+    "Apr": 0.232,
+    "PF": 105,
+    "PS": 114
+  },
+  {
+    "Pos": 15,
+    "Time": "Washington Wizards",
+    "V": 18,
+    "D": 64,
+    "Apr": 0.220,
+    "PF": 108,
+    "PS": 120
+  },
+  {
+    "Pos": 16,
+    "Time": "Oklahoma City Thunder",
+    "V": 68,
+    "D": 14,
+    "Apr": 0.829,
+    "PF": 120,
+    "PS": 108
+  },
+  {
+    "Pos": 17,
+    "Time": "Houston Rockets",
+    "V": 52,
+    "D": 30,
+    "Apr": 0.634,
+    "PF": 114,
+    "PS": 110
+  },
+  {
+    "Pos": 18,
+    "Time": "Los Angeles Lakers",
+    "V": 50,
+    "D": 32,
+    "Apr": 0.610,
+    "PF": 113,
+    "PS": 112
+  },
+  {
+    "Pos": 19,
+    "Time": "LA Clippers",
+    "V": 50,
+    "D": 32,
+    "Apr": 0.610,
+    "PF": 113,
+    "PS": 108
+  },
+  {
+    "Pos": 20,
+    "Time": "Golden State Warriors",
+    "V": 48,
+    "D": 34,
+    "Apr": 0.585,
+    "PF": 114,
+    "PS": 110
+  },
+  {
+    "Pos": 21,
+    "Time": "Denver Nuggets",
+    "V": 50,
+    "D": 32,
+    "Apr": 0.610,
+    "PF": 121,
+    "PS": 117
+  },
+  {
+    "Pos": 22,
+    "Time": "Minnesota Timberwolves",
+    "V": 49,
+    "D": 33,
+    "Apr": 0.598,
+    "PF": 114,
+    "PS": 109
+  },
+  {
+    "Pos": 23,
+    "Time": "Memphis Grizzlies",
+    "V": 48,
+    "D": 34,
+    "Apr": 0.585,
+    "PF": 122,
+    "PS": 117
+  },
+  {
+    "Pos": 24,
+    "Time": "Dallas Mavericks",
+    "V": 39,
+    "D": 43,
+    "Apr": 0.476,
+    "PF": 114,
+    "PS": 115
+  },
+  {
+    "Pos": 25,
+    "Time": "San Antonio Spurs",
+    "V": 34,
+    "D": 48,
+    "Apr": 0.415,
+    "PF": 114,
+    "PS": 117
+  },
+  {
+    "Pos": 26,
+    "Time": "Phoenix Suns",
+    "V": 36,
+    "D": 46,
+    "Apr": 0.439,
+    "PF": 114,
+    "PS": 117
+  },
+  {
+    "Pos": 27,
+    "Time": "Portland Trail Blazers",
+    "V": 36,
+    "D": 46,
+    "Apr": 0.439,
+    "PF": 111,
+    "PS": 114
+  },
+  {
+    "Pos": 28,
+    "Time": "New Orleans Pelicans",
+    "V": 21,
+    "D": 61,
+    "Apr": 0.256,
+    "PF": 110,
+    "PS": 119
+  },
+  {
+    "Pos": 29,
+    "Time": "Utah Jazz",
+    "V": 17,
+    "D": 65,
+    "Apr": 0.207,
+    "PF": 112,
+    "PS": 121
+  }
+]
+
 }

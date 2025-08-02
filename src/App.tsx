@@ -3,6 +3,7 @@ import { QueryClientProvider, QueryClient } from '@tanstack/react-query'
 import Index from "./pages";
 import Futebol from "./pages/Futebol";
 import NotFound from "./pages/NotFound";
+import Basquete from "./pages/Basquete";
 
 
 const queryClient = new QueryClient()
@@ -14,7 +15,7 @@ const App = () => (
             <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/futebol" element={<Futebol />} />
-                <Route path="/basquete" element={<Index />} />
+                <Route path="/basquete" element={<Basquete />} />
                 <Route path="/ranking" element={<Index />} />
                 <Route path="*" element={<NotFound />} />
             </Routes>
